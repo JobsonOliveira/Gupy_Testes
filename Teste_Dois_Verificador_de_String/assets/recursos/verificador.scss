@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vr-cor-primaria: #fff;
+    --vr-cor-secundaria: #000;
+    --vr-cor-terciaria: #0092fa;
+
+    --vr-box-shadow: 2px 2px 2px #000;
+}
+
+.vr-main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Abel", sans-serif;
+
+    & .vr-entradas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(0, 179, 255, 0.478);
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: var(--vr-box-shadow);
+        align-items: center;
+
+        & .vr-texto {
+            min-width: 300px;
+            max-width: 300px;
+            min-height: 150px;
+            max-height: 150px;
+            font-size: 1.5rem;
+            padding: 5px;
+            border: 1px solid var(--vr-cor-secundaria);
+            outline: none;
+            background-color: transparent;
+            border-radius: 5px;
+        }
+
+        & .vr-botao {
+            outline: none;
+            background-color: var(--vr-cor-terciaria);
+            border: 1px solid var(--vr-cor-secundaria);
+            border-radius: 5px;
+            font-size: 1.5rem;
+            width: max-content;
+            padding: 5px;
+            box-shadow: var(--vr-box-shadow);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--vr-cor-primaria);
+            }
+        }
+
+        & .vr-resultado {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--vr-cor-primaria);
+            gap: 5px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid var(--vr-cor-secundaria);
+            border-radius: 5px;
+            min-height: 70px;
+
+            & .vr-resultado-mensagem {
+                font-size: 1.5rem;
+            }
+
+            & .vr-resultado-quantidade {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
